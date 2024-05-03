@@ -1,8 +1,10 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
+  chromeWebSecurity: false,
   e2e: {
     watchForFileChanges: true,
+    defaultCommandTimeout: 20000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
